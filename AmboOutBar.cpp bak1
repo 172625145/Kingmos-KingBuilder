@@ -1,0 +1,257 @@
+// AmboOutBar.cpp : implementation file
+//
+
+#include "stdafx.h"
+#include "ambo.h"
+#include "AmboOutBar.h"
+#include "OutputView.h"
+#include "MainFrame.h"
+#include "AmboDoc.h"
+#include "AmboFrame.h"
+#include "AmboView.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CAmboOutBar
+DWORD WINAPI BuildThreadProc(LPVOID lpParameter);
+
+CAmboOutBar::CAmboOutBar()
+{
+}
+
+CAmboOutBar::~CAmboOutBar()
+{
+}
+
+
+BEGIN_MESSAGE_MAP(CAmboOutBar, CmlControlBar)
+	//{{AFX_MSG_MAP(CAmboOutBar)
+	ON_WM_CREATE()
+	ON_WM_SIZE()
+	ON_WM_KEYDOWN()
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CAmboOutBar message handlers
+
+int CAmboOutBar::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+{
+	if (CmlControlBar::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	
+	// TODO: Add your specialized creation code here
+/*	if (! m_OutCtrl.Create (NULL, NULL, WS_VISIBLE|WS_CHILD,
+		CRect(0, 0, 0, 0), this, 32))
+	{
+		TRACE0("Failed to create Tab view \n");
+		return -1;
+	}
+*/
+	if (! m_OutBar.Create (WS_VISIBLE|WS_CHILD|TCS_TABS|TCS_SINGLELINE|TCS_BOTTOM ,
+		CRect(0, 0, 0, 0), this, 101))
+	{
+		return -1;
+	}
+	
+	// set "normal" GUI-font
+	CFont *font = CFont::FromHandle((HFONT)::GetStockObject(DEFAULT_GUI_FONT));
+//	m_OutCtrl.SetFont(font);
+	m_OutBar.SetFont(font);
+
+//	m_BuildIndex = m_OutBar.AddView (TEXT ("Build"), RUNTIME_CLASS(CmlBuildView));
+//	m_DebugIndex = m_OutBar.AddView (TEXT ("Debug"), RUNTIME_CLASS(CmlBuildView));
+	m_BuildIndex = m_OutBar.AddView (TEXT ("Build"), RUNTIME_CLASS(COutputView),0);
+//	m_DebugIndex = m_OutBar.AddView (TEXT ("Debug"), RUNTIME_CLASS(COutputView),1);
+//	m_OutBar.SetActiveView (0);
+
+/*	m_OutBar.AddString(m_BuildIndex,"Hello Build");
+	m_OutBar.AddString(m_DebugIndex,"Hello Debug");
+	m_OutBar.Empty (m_BuildIndex);
+	m_OutBar.Empty (m_DebugIndex);
+	m_OutBar.AddString(m_BuildIndex,"Hello Build1");
+	m_OutBar.AddString(m_DebugIndex,"Hello Debug1");
+*/
+	m_hReadPipe = CreateNamedPipe(
+	  TEXT("\\\\.\\pipe\\AmboReadPipe"),                 // pipe name
+	  PIPE_ACCESS_INBOUND,                           // pipe open mode
+	  PIPE_TYPE_MESSAGE|PIPE_READMODE_MESSAGE|PIPE_WAIT,       // pipe-specific modes
+	  10,                        // maximum number of instances
+	  1024,                       // output buffer size
+	  1024,                        // input buffer size
+	  500,                      // time-out interval
+	  NULL// SD
+	);
+	m_hWritePipe = CreateNamedPipe(
+	  TEXT("\\\\.\\pipe\\AmboWritePipe"),                 // pipe name
+	  PIPE_ACCESS_OUTBOUND,                           // pipe open mode
+	  PIPE_TYPE_MESSAGE|PIPE_READMODE_MESSAGE|PIPE_WAIT,       // pipe-specific modes
+	  10,                        // maximum number of instances
+	  1024,                       // output buffer size
+	  1024,                        // input buffer size
+	  500,                      // time-out interval
+	  NULL// SD
+	);
+
+	m_hWriteHandle = CreateFile(TEXT("\\\\.\\pipe\\AmboReadPipe"),
+		GENERIC_WRITE,
+		FILE_SHARE_READ|FILE_SHARE_WRITE,
+		NULL,
+		OPEN_EXISTING,
+		FILE_ATTRIBUTE_NORMAL,
+		NULL);
+	m_hReadHandle = CreateFile(TEXT("\\\\.\\pipe\\AmboWritePipe"),
+		GENERIC_READ,
+		FILE_SHARE_READ|FILE_SHARE_WRITE,
+		NULL,
+		OPEN_EXISTING,
+		FILE_ATTRIBUTE_NORMAL,
+		NULL);
+
+	m_bReadPipeStop = FALSE;
+
+///	TRACE("Will wait ReadPipe Connecting ...");
+//	WaitNamedPipe("\\\\.\\pipe\\AmboReadPipe",NMPWAIT_WAIT_FOREVER);
+//	TRACE("The ReadPipe had Connected");
+//	CreateThread(NULL,0,BuildThreadProc,this,0,0);
+//	Execute (TEXT("gcc --verbose"));
+//	Execute(lpszCmd);
+	return 0;
+}
+
+void CAmboOutBar::OnSize(UINT nType, int cx, int cy) 
+{
+	CmlControlBar::OnSize(nType, cx, cy);
+	
+	// TODO: Add your message handler code here
+	CRect rect;
+	GetClientRect (&rect);
+	m_OutBar.MoveWindow (&rect);
+}
+void CAmboOutBar::OnKeyDown(int nChar, int nRepCnt, int nFlags) 
+{
+	// TODO: Add your message handler code here and/or call default
+//		TestError();
+		CWnd::OnKeyDown(nChar, nRepCnt, nFlags);
+}
+
+ULONG CALLBACK CAmboOutBar::BuildThreadProc( LPVOID lpParameter )
+{
+	CAmboOutBar *pOutBar = (CAmboOutBar *)lpParameter;
+	TCHAR buffer[1024];
+	DWORD dwReadlen = 0;
+	DWORD dwAvail;
+
+
+	while(1)
+	{
+		if (::PeekNamedPipe(pOutBar->m_hReadPipe, NULL, 0, 0, &dwAvail, NULL))
+		{
+			ReadFile(pOutBar->m_hReadPipe,buffer,1024,&dwReadlen,NULL);
+			if (dwReadlen)
+			{
+				buffer[dwReadlen] =0;
+//				pOutBar->m_OutBar.AddString(pOutBar->m_BuildIndex,"F:\\WORK\\eBuilder\\Ambo\\Builder\\OutputMessageEdit.cpp:959: error C2146: syntax error : missing ';' before identifier 'LineInfo1'\n");
+				pOutBar->m_OutBar.AddString(pOutBar->m_BuildIndex,buffer);
+			}
+		}
+		if (! pOutBar->IsRun ())
+		{
+//			::KillTimer (GetSafeHwnd(), UPDATE_TIME);
+			break;
+		}
+//		if (pOutBar->bReadPipeStop == TRUE)
+//			break;
+	}
+	return 0;
+}
+
+void CAmboOutBar::Execute(LPCTSTR lpszCmd)
+{
+//	::SetTimer (GetSafeHwnd (), UPDATE_TIME, 100, NULL);
+
+	CreateThread(NULL,0,BuildThreadProc,this,0,0);
+	m_Cygwin.Run (lpszCmd, m_hWriteHandle, m_hReadHandle, m_hWritePipe);
+}
+
+// 编译当前打开的文件
+BOOL CAmboOutBar::Compile()
+{
+	CMainFrame* pMainFrame = (CMainFrame*)((CAmboApp *)AfxGetApp())->m_pMainWnd;
+
+	if (pMainFrame)
+	{
+		CAmboFrame* pChildFrame = (CAmboFrame*)pMainFrame->MDIGetActive();
+		if (pChildFrame)
+		{
+			CAmboView* pView = (CAmboView*)pChildFrame->GetActiveView();
+		
+			if (pView)
+			{
+				CAmboDoc*pDoc = pView->GetDocument();
+				CString strFileName;
+				CString strCmd;
+				strFileName = pDoc->GetPathName();
+				//MessageBox(strFileName);
+//				strCmd = "gcc ";
+//				strCmd += strFileName;
+//				Execute(strCmd);
+				Execute (TEXT("gcc --verbose"));
+				return TRUE;
+			}
+		}
+	}
+	return FALSE;
+}
+
+// 编译当前打开的工程
+BOOL CAmboOutBar::Build()
+{
+	CMainFrame* pMainFrame = (CMainFrame*)((CAmboApp *)AfxGetApp())->m_pMainWnd;
+
+	if (pMainFrame)
+	{
+		if (pMainFrame->m_workBar.m_pProjectInfo)
+		{
+			//已经打开了一个Project,我们将编译这个Project
+//			MessageBox(pMainFrame->m_workBar.m_pProjectInfo->m_strFileName);
+			Execute("");
+			return TRUE;
+		}
+		else if (pMainFrame->m_workBar.m_pWorkSpaceInfo)
+		{
+			//已经打开了一个WorkSpace,我们将编译这个WorkSpace
+//			MessageBox(pMainFrame->m_workBar.m_pWorkSpaceInfo->m_strFileName);
+			Execute("build");
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+BOOL CAmboOutBar::ReBuild()
+{
+//	Execute("make clean");
+//	Execute("build");
+	Execute("rebuild");
+
+	return FALSE;
+}
+BOOL CAmboOutBar::MakeImage()
+{
+	Execute("make clean");
+	return FALSE;
+}
+BOOL CAmboOutBar::Clean()
+{
+	Execute("make clean");
+	return FALSE;
+}
+BOOL CAmboOutBar::Console()
+{
+	return m_Cygwin.Console();
+}

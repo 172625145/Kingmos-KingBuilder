@@ -1,0 +1,78 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by Ambo.rc
+//
+#define IDD_ABOUTBOX                    100
+#define IDR_MAINFRAME                   128
+#define IDR_AMBOTYPE                    129
+#define IDB_TABIMAGES                   130
+#define IDS_AMBOTYPEBAK                 130
+#define IDI_ICONFOLDER                  131
+#define IDI_ICONFILE                    132
+#define IDD_FINDTEXTDLG                 133
+#define IDR_TOOLBAR1                    133
+#define IDR_BUILDBAR                    133
+#define IDD_SETSYSCOLOR                 134
+#define IDD_CREATESELECT                135
+#define IDD_CREATEINPUT                 138
+#define IDR_EDITBAR                     141
+#define IDC_MARKALL                     1000
+#define IDC_WORKSPACESNAME              1000
+#define IDC_FINDNEXT                    1001
+#define IDC_LOCATION                    1001
+#define IDC_COMBO1                      1002
+#define IDC_BROWES                      1002
+#define IDC_UPDIR                       1003
+#define IDC_COMBO2                      1003
+#define IDC_DOWNDIR                     1004
+#define IDC_WORKSPACE                   1004
+#define IDC_MATCHALLWORD                1005
+#define IDC_PROJECT                     1005
+#define IDC_MATCHCASE                   1006
+#define IDC_TEXTFILE                    1006
+#define IDC_COLORITEMCOMBO              1011
+#define IDC_SelColor                    1012
+#define IDC_DEFAULTCOLOR                1013
+#define ID_PUZZLER_NAME                 32771
+#define IDM_TEST                        32772
+#define ID_TEST1                        32773
+#define ID_BUILD                        32773
+#define ID_TEST2                        32774
+#define ID_COMMANDBAR_SEARCH            32775
+#define ID_Test3                        32776
+#define ID_TEST4                        32777
+#define ID_TEST5                        32778
+#define ID_EDIT_TOGGLE_BOOKMARK         32779
+#define ID_NEW                          32779
+#define ID_EDIT_GOTO_NEXT_BOOKMARK      32780
+#define ID_EDIT_GOTO_PREV_BOOKMARK      32781
+#define ID_EDIT_CLEAR_ALL_BOOKMARKS     32782
+#define ID_VIEW_TESTTOOLBAR             32782
+#define ID_VIEW_EDITBAR                 32782
+#define ID_SETSYSCOLOR                  32783
+#define ID_VIEW_WORKSPACE               32783
+#define ID_VIEW_OUTPUT                  32784
+#define ID_BOOKMARK                     32785
+#define ID_NEXTBOOKMARK                 32786
+#define ID_PREVBOOKMARK                 32787
+#define ID_CLEARBOOKMARK                32788
+#define ID_SEARCHINPUT                  32789
+#define ID_COMPILE                      32790
+#define ID_STOPBUILD                    32791
+#define ID_VIEW_BUILDBAR                32792
+#define IDS_CFILEFILTER                 61446
+#define IDS_WORKSPACESFILTER            61447
+#define IDS_PROJECTFILTER               61448
+#define IDS_TEXTFILTER                  61449
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        142
+#define _APS_NEXT_COMMAND_VALUE         32793
+#define _APS_NEXT_CONTROL_VALUE         1007
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

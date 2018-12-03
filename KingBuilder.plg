@@ -1,0 +1,215 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KingBuilder - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/KingBuilder.res" /d "NDEBUG" /d "_AFXDLL" "D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\KingBuilder.rc"" 
+Creating temporary file "C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/KingBuilder.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ActiveSoftWare.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboConfigView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboDoc.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboFrame.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboMatterView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboOutBar.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\AmboWorkBar.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\BSPConfig.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\CommandBar.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\CPUAndBSPDirPage.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\CreateSelectPage.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\DirectoryList.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\EnvironmentSet.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\FileParse.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\FindInFiles.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\FindText.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\FormatEdit.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\Grep.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\InputPage.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\KingBuilder.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\MainFrame.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\MessageView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\mlControlBar.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\mlOutTab.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\mlViewTab.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ModuleRead.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ModuleSelect.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\MyFileList.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\NewBSPPage.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\NewFolder.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\NewPlatform_Setp1.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\NewPlatform_Setp2.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\NewPlatform_Setp3.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\OutputMessageEdit.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\OutputView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_Page1.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_Page2.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_page3.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_page4.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_page5.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\PlatformSet_page6.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ProjectDoc.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ProjectInfo.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ProjectView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\RecentStringList.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\ReplaceText.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SetEnv.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SetSysColor.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SpecialEdit.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SpecialView.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\srcData.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SysOption.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\SysSetting.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\TradeMarkFrame.cpp"
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\WorkSpaceInfo.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2B.tmp" 
+Creating temporary file "C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/KingBuilder.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\kingmos\KingBuilder\platform builder 2.3.2\KingBuilder\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2C.tmp" 
+Creating temporary file "C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/KingBuilder.pdb" /machine:I386 /out:"../Bin/KingBuilder.exe" 
+".\Release\ActiveSoftWare.obj"
+".\Release\AmboConfigView.obj"
+".\Release\AmboDoc.obj"
+".\Release\AmboFrame.obj"
+".\Release\AmboMatterView.obj"
+".\Release\AmboOutBar.obj"
+".\Release\AmboView.obj"
+".\Release\AmboWorkBar.obj"
+".\Release\BSPConfig.obj"
+".\Release\CommandBar.obj"
+".\Release\CPUAndBSPDirPage.obj"
+".\Release\CreateSelectPage.obj"
+".\Release\DirectoryList.obj"
+".\Release\EnvironmentSet.obj"
+".\Release\FileParse.obj"
+".\Release\FindInFiles.obj"
+".\Release\FindText.obj"
+".\Release\FormatEdit.obj"
+".\Release\Grep.obj"
+".\Release\InputPage.obj"
+".\Release\KingBuilder.obj"
+".\Release\MainFrame.obj"
+".\Release\MessageView.obj"
+".\Release\mlControlBar.obj"
+".\Release\mlOutTab.obj"
+".\Release\mlViewTab.obj"
+".\Release\ModuleRead.obj"
+".\Release\ModuleSelect.obj"
+".\Release\MyFileList.obj"
+".\Release\NewBSPPage.obj"
+".\Release\NewFolder.obj"
+".\Release\NewPlatform_Setp1.obj"
+".\Release\NewPlatform_Setp2.obj"
+".\Release\NewPlatform_Setp3.obj"
+".\Release\OutputMessageEdit.obj"
+".\Release\OutputView.obj"
+".\Release\PlatformSet_Page1.obj"
+".\Release\PlatformSet_Page2.obj"
+".\Release\PlatformSet_page3.obj"
+".\Release\PlatformSet_page4.obj"
+".\Release\PlatformSet_page5.obj"
+".\Release\PlatformSet_page6.obj"
+".\Release\ProjectDoc.obj"
+".\Release\ProjectInfo.obj"
+".\Release\ProjectView.obj"
+".\Release\RecentStringList.obj"
+".\Release\ReplaceText.obj"
+".\Release\SetEnv.obj"
+".\Release\SetSysColor.obj"
+".\Release\SpecialEdit.obj"
+".\Release\SpecialView.obj"
+".\Release\srcData.obj"
+".\Release\StdAfx.obj"
+".\Release\SysOption.obj"
+".\Release\SysSetting.obj"
+".\Release\TradeMarkFrame.obj"
+".\Release\WorkSpaceInfo.obj"
+".\Release\KingBuilder.res"
+"\kingmos\KingBuilder\platform builder 2.3.2\mlClass\Release\kingmosclass.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSPD2D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ActiveSoftWare.cpp
+AmboConfigView.cpp
+AmboDoc.cpp
+AmboFrame.cpp
+AmboMatterView.cpp
+AmboOutBar.cpp
+AmboView.cpp
+AmboWorkBar.cpp
+BSPConfig.cpp
+CommandBar.cpp
+CPUAndBSPDirPage.cpp
+CreateSelectPage.cpp
+DirectoryList.cpp
+EnvironmentSet.cpp
+FileParse.cpp
+FindInFiles.cpp
+FindText.cpp
+FormatEdit.cpp
+Grep.cpp
+InputPage.cpp
+Generating Code...
+Compiling...
+KingBuilder.cpp
+MainFrame.cpp
+MessageView.cpp
+mlControlBar.cpp
+mlOutTab.cpp
+mlViewTab.cpp
+ModuleRead.cpp
+ModuleSelect.cpp
+MyFileList.cpp
+NewBSPPage.cpp
+NewFolder.cpp
+NewPlatform_Setp1.cpp
+NewPlatform_Setp2.cpp
+NewPlatform_Setp3.cpp
+OutputMessageEdit.cpp
+OutputView.cpp
+PlatformSet_Page1.cpp
+PlatformSet_Page2.cpp
+PlatformSet_page3.cpp
+PlatformSet_page4.cpp
+Generating Code...
+Compiling...
+PlatformSet_page5.cpp
+PlatformSet_page6.cpp
+ProjectDoc.cpp
+ProjectInfo.cpp
+ProjectView.cpp
+RecentStringList.cpp
+ReplaceText.cpp
+SetEnv.cpp
+SetSysColor.cpp
+SpecialEdit.cpp
+SpecialView.cpp
+srcData.cpp
+SysOption.cpp
+SysSetting.cpp
+TradeMarkFrame.cpp
+WorkSpaceInfo.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+KingBuilder.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

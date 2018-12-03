@@ -1,0 +1,73 @@
+# Microsoft Developer Studio Generated Dependency File, included by Ambo.mak
+
+.\Ambo.cpp : \
+	".\Ambo.h"\
+	".\AmboDoc.h"\
+	".\AmboFrame.h"\
+	".\AmboView.h"\
+	".\AmboWorkBar.h"\
+	".\MainFrame.h"\
+	".\mlControlBar.h"\
+	".\mlViewTab.h"\
+	
+
+.\AmboDoc.cpp : \
+	".\Ambo.h"\
+	".\AmboDoc.h"\
+	
+
+.\AmboFrame.cpp : \
+	".\Ambo.h"\
+	".\AmboFrame.h"\
+	
+
+.\AmboView.cpp : \
+	".\Ambo.h"\
+	".\AmboDoc.h"\
+	".\AmboView.h"\
+	
+
+.\AmboWorkBar.cpp : \
+	".\Ambo.h"\
+	".\AmboDoc.h"\
+	".\AmboView.h"\
+	".\AmboWorkBar.h"\
+	".\mlControlBar.h"\
+	".\mlViewTab.h"\
+	
+
+.\MainFrame.cpp : \
+	".\Ambo.h"\
+	".\AmboWorkBar.h"\
+	".\MainFrame.h"\
+	".\mlControlBar.h"\
+	".\mlViewTab.h"\
+	
+
+.\mlControlBar.cpp : \
+	".\Ambo.h"\
+	".\mlControlBar.h"\
+	
+
+.\mlCygwin.cpp : \
+	".\Ambo.h"\
+	".\mlCygwin.h"\
+	
+
+.\mlViewTab.cpp : \
+	".\Ambo.h"\
+	".\mlViewTab.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Ambo.rc : \
+	".\res\Ambo.ico"\
+	".\res\Ambo.rc2"\
+	".\res\AmboDoc.ico"\
+	".\res\bitmap1.bmp"\
+	".\res\Toolbar.bmp"\
+	

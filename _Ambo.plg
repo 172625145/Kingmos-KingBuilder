@@ -1,0 +1,84 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ambo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Ambo.res" /d "_DEBUG" /d "_AFXDLL" "D:\kingmos\KingBuilder\platform builder 2.3.1\Builder\Ambo.rc"" 
+Creating temporary file "C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+../mlClass/debug/Kingmosclass.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/kingbuilder.pdb" /debug /machine:I386 /out:"../bin/kingbuilder.exe" /pdbtype:sept 
+".\Debug\ActiveSoftWare.obj"
+".\Debug\Ambo.obj"
+".\Debug\AmboConfigView.obj"
+".\Debug\AmboDoc.obj"
+".\Debug\AmboFrame.obj"
+".\Debug\AmboMatterView.obj"
+".\Debug\AmboOutBar.obj"
+".\Debug\AmboView.obj"
+".\Debug\AmboWorkBar.obj"
+".\Debug\BSPConfig.obj"
+".\Debug\CommandBar.obj"
+".\Debug\CPUAndBSPDirPage.obj"
+".\Debug\CreateSelectPage.obj"
+".\Debug\DirectoryList.obj"
+".\Debug\EnvironmentSet.obj"
+".\Debug\FileParse.obj"
+".\Debug\FindInFiles.obj"
+".\Debug\FindText.obj"
+".\Debug\FormatEdit.obj"
+".\Debug\Grep.obj"
+".\Debug\InputPage.obj"
+".\Debug\MainFrame.obj"
+".\Debug\MessageView.obj"
+".\Debug\mlControlBar.obj"
+".\Debug\mlOutTab.obj"
+".\Debug\mlViewTab.obj"
+".\Debug\ModuleRead.obj"
+".\Debug\ModuleSelect.obj"
+".\Debug\MyFileList.obj"
+".\Debug\NewBSPPage.obj"
+".\Debug\NewFolder.obj"
+".\Debug\NewPlatform_Setp1.obj"
+".\Debug\NewPlatform_Setp2.obj"
+".\Debug\NewPlatform_Setp3.obj"
+".\Debug\OutputMessageEdit.obj"
+".\Debug\OutputView.obj"
+".\Debug\PlatformSet_Page1.obj"
+".\Debug\PlatformSet_Page2.obj"
+".\Debug\PlatformSet_page3.obj"
+".\Debug\PlatformSet_page4.obj"
+".\Debug\PlatformSet_page5.obj"
+".\Debug\PlatformSet_page6.obj"
+".\Debug\ProjectDoc.obj"
+".\Debug\ProjectInfo.obj"
+".\Debug\ProjectView.obj"
+".\Debug\RecentStringList.obj"
+".\Debug\ReplaceText.obj"
+".\Debug\SetEnv.obj"
+".\Debug\SetSysColor.obj"
+".\Debug\SpecialEdit.obj"
+".\Debug\SpecialView.obj"
+".\Debug\srcData.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SysOption.obj"
+".\Debug\SysSetting.obj"
+".\Debug\TradeMarkFrame.obj"
+".\Debug\WorkSpaceInfo.obj"
+".\Debug\Ambo.res"
+"\kingmos\KingBuilder\platform builder 2.3.1\mlClass\Debug\kingmosClass.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\r102.MLG\LOCALS~1\Temp\RSP3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+KingBuilder.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

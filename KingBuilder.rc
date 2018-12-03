@@ -1,0 +1,2611 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Ambo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\icon2.ico"
+IDR_AMBOTYPE            ICON    DISCARDABLE     "res\\AmboDoc.ico"
+IDI_ROOT                ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_GROUP               ICON    DISCARDABLE     "res\\group.ico"
+IDI_MODULE              ICON    DISCARDABLE     "res\\module.ico"
+IDI_LIST                ICON    DISCARDABLE     "res\\list.ico"
+IDI_SOURCE              ICON    DISCARDABLE     "res\\source.ico"
+IDI_DIRECTORY           ICON    DISCARDABLE     "res\\directory.ico"
+IDI_SELECTED            ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_UNSELECTED          ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_CONFIGVIEW          ICON    DISCARDABLE     "configview.ico"
+IDI_MATTERVIEW          ICON    DISCARDABLE     "matterview.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDR_BUILDBAR            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_EDITBAR             BITMAP  DISCARDABLE     "res\\editbar.bmp"
+IDB_TRACEMARK           BITMAP  DISCARDABLE     "res\\setup.bmp"
+IDB_INSERT              BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_DELETE              BITMAP  DISCARDABLE     "res\\delete.bmp"
+IDB_UPLINE              BITMAP  DISCARDABLE     "res\\upline.bmp"
+IDB_DOWNLINE            BITMAP  DISCARDABLE     "res\\downline.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_VIEW_WORKSPACE
+    BUTTON      ID_VIEW_OUTPUT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_BUILDBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDM_COMPILE
+    BUTTON      IDM_BUILD
+    BUTTON      IDM_STOPBUILD
+    BUTTON      IDM_MAKEIMAGE
+    BUTTON      IDM_CLEAN
+END
+
+IDR_EDITBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_EDIT_TOGGLE_BOOKMARK
+    BUTTON      ID_EDIT_GOTO_NEXT_BOOKMARK
+    BUTTON      ID_EDIT_GOTO_PREV_BOOKMARK
+    BUTTON      ID_EDIT_CLEAR_ALL_BOOKMARKS
+    SEPARATOR
+    BUTTON      ID_FINDINFILES
+    BUTTON      ID_SEARCHINPUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "新建&WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "打开Work&Space",              ID_OPENWORKSPACE
+        MENUITEM "关闭Wo&rkSpace",              ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "打印设置(&R)...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "最近打开的文件"
+        BEGIN
+            MENUITEM "最近文件",                    ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "最近打开的WorkSpace"
+        BEGIN
+            MENUITEM "最近工程",                    ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复撤消(R)\tCtrl+Y",         ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "在文件中查找...",             ID_FINDINFILES
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                  ID_VIEW_STATUS_BAR
+        MENUITEM "编辑条",                      ID_VIEW_EDITBAR
+        MENUITEM "编译条",                      ID_VIEW_BUILDBAR
+        MENUITEM "工程管理区",                  ID_VIEW_WORKSPACE
+        MENUITEM "输出窗口",                    ID_VIEW_OUTPUT
+    END
+    POPUP "编译(&B)"
+    BEGIN
+        MENUITEM "编译文件",                    IDM_COMPILE
+        MENUITEM "编译模块(&F)",                IDM_COMPILEFEATURE
+        MENUITEM "编译工程(&B)",                IDM_BUILD
+        MENUITEM "停止编译(&S)",                IDM_STOPBUILD
+        MENUITEM "生成映像",                    IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "重新编译(&R)",                IDM_REBUILD
+        MENUITEM "清       除",                 IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "命 令 行",                    IDM_CONSOLE
+    END
+    POPUP "工程管理(&P)"
+    BEGIN
+        MENUITEM "环境设置(&S)",                IDM_PRJSETTING
+        MENUITEM "模块选择(&M)",                IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "添加文件",                    IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "系统配置(&O)",                IDM_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "使用说明",                    ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "关于 Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_AMBOTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",               ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "新建&WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "打开Work&Space",              ID_OPENWORKSPACE
+        MENUITEM "关闭Wo&rkSpace",              ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "打印设置(&R)...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "最近打开的文件"
+        BEGIN
+            MENUITEM "最近文件",                    ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "最近打开的WorkSpace"
+        BEGIN
+            MENUITEM "最近工程",                    ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复撤消(R)\tCtrl+Y",         ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "在文件中查找...",             ID_FINDINFILES
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                  ID_VIEW_STATUS_BAR
+        MENUITEM "编辑条",                      ID_VIEW_EDITBAR
+        MENUITEM "编译条",                      ID_VIEW_BUILDBAR
+        MENUITEM "工程管理区",                  ID_VIEW_WORKSPACE
+        MENUITEM "输出窗口",                    ID_VIEW_OUTPUT
+    END
+    POPUP "编译(&B)"
+    BEGIN
+        MENUITEM "编译文件",                    IDM_COMPILE
+        MENUITEM "编译模块(&F)",                IDM_COMPILEFEATURE
+        MENUITEM "编译工程(&B)",                IDM_BUILD
+        MENUITEM "停止编译(&S)",                IDM_STOPBUILD
+        MENUITEM "生成映像",                    IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "重新编译(&R)",                IDM_REBUILD
+        MENUITEM "清      除",                  IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "命 令  行",                   IDM_CONSOLE
+    END
+    POPUP "工程管理(&P)"
+    BEGIN
+        MENUITEM "环境设置(&S)",                IDM_PRJSETTING
+        MENUITEM "模块选择(&M)",                IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "添加文件",                    IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "系统配置(&O)",                IDM_OPTION
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "关闭所有窗口(&L)",            ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "新建窗口(&N)",                ID_WINDOW_NEW
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "下一个窗口(&E)",              ID_WINDOW_NEXT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "使用说明",                    ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "关于 Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_MATTERVIEWPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "编译模块(&F)",                IDM_COMPILEFEATURE
+        MENUITEM "编译工程(&B)",                IDM_BUILD
+        MENUITEM "重新编译(&R)",                IDM_REBUILD
+        MENUITEM SEPARATOR
+        MENUITEM "刷新模块",                    IDM_REFRESHMODULE
+    END
+END
+
+IDR_EDITPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复撤消(R)\tCtrl+Y",         ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+    END
+END
+
+IDR_PROJECTPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Project"
+    BEGIN
+        MENUITEM "添加新目录(&N)",              IDM_INSERTFOLDER
+        MENUITEM "添加文件(&I)",                IDM_INSERTFILE
+        MENUITEM "删除(&D)",                    IDM_DELETEITEM
+        MENUITEM SEPARATOR
+        MENUITEM "编译文件(&C)",                ID_COMPILE
+        MENUITEM "编译工程(&B)",                IDM_BUILD
+        MENUITEM "重新编译(&R)",                IDM_REBUILD
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Kingmos Builder"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Kingmos Platform Builder (Version:2.3 )",IDC_STATIC,39,
+                    7,189,8,SS_NOPREFIX
+    LTEXT           "深圳市微逻辑电子有限公司 1998-2005 版权所有 (C) ",
+                    IDC_STATIC,39,28,189,8
+    DEFPUSHBUTTON   "确定",IDOK,178,47,50,14,WS_GROUP
+END
+
+IDD_CREATESELECT DIALOG DISCARDABLE  0, 0, 256, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建"
+FONT 10, "System"
+BEGIN
+    CONTROL         "WorkSpace",IDC_WORKSPACE,"Button",BS_AUTORADIOBUTTON,18,
+                    7,99,10
+    CONTROL         "Project",IDC_PROJECT,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,18,46,93,10
+    LTEXT           "在这里，我们要创建一个平台来将我们所需要的硬件驱动全部包含进来，成为一个在指定CPU下特定硬件的操作系统。",
+                    IDC_STATIC,31,19,218,25
+    LTEXT           "在这里，可以创建一个应用程序的工程文件，并编译成一个可以在特定CPU下运行的应用程序。",
+                    IDC_STATIC,32,58,217,18,NOT WS_VISIBLE
+END
+
+IDD_CREATEINPUT DIALOG DISCARDABLE  0, 0, 306, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Project"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Project Name:",IDC_STATIC,134,13,69,9
+    EDITTEXT        IDC_WORKSPACESNAME,134,25,160,14,ES_AUTOHSCROLL
+    LTEXT           "Location:",IDC_STATIC,134,46,68,8
+    EDITTEXT        IDC_LOCATION,134,55,143,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWES,281,55,13,14
+    LTEXT           "CPU Support:",IDC_STATIC,134,74,50,8
+    COMBOBOX        IDC_CPUSELECT,134,83,160,52,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Project Type",IDC_STATIC,15,13,55,8
+    LISTBOX         IDC_PROJECTTYPE,15,24,104,71,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Load From a Exist Modules",IDC_LOADFROMSOURCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,102,240,10
+    LTEXT           "Module Position:",IDC_STATIC,16,116,68,8
+    EDITTEXT        IDC_SOURCELOCATION,17,128,259,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_SOURCEBROWES,281,127,13,14
+END
+
+IDD_OPTION DIALOG DISCARDABLE  0, 0, 189, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Option"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,101,97,36,14
+    PUSHBUTTON      "取消",IDCANCEL,148,97,34,14
+    LISTBOX         IDC_TEXTLIST,22,13,60,79,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FOREGROUND,104,13,61,52,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BACKGROUND,104,42,63,52,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "前景颜色：",IDC_STATIC,96,3,51,10
+    LTEXT           "背景颜色：",IDC_STATIC,97,29,40,10
+    LTEXT           "设置区域：",IDC_STATIC,7,2,59,9
+    LTEXT           "效果：",IDC_STATIC,97,62,40,8
+    PUSHBUTTON      "重置",IDC_RESET,32,97,38,14
+    CONTROL         "Button1",IDC_EFFECT,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    99,71,70,19
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 216, 148
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         150,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    216,148
+END
+
+IDD_FINDTEXTDLG DIALOG DISCARDABLE  0, 0, 258, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_FINDTEXTCOMBO,50,13,136,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match Whole Word Only",IDC_MATCHWHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,37,95,10
+    CONTROL         "Match Case",IDC_MATCH_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,50,54,10
+    CONTROL         "Up",IDC_UP_DIR,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,131,43,25,10
+    CONTROL         "Down",1004,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,131,
+                    53,34,10
+    DEFPUSHBUTTON   "Find Next",IDC_FIND_NEXT,192,13,45,12,WS_DISABLED
+    PUSHBUTTON      "Mark All",IDC_MARKALL,192,28,45,11,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,192,42,45,12
+    LTEXT           "Find What:",IDC_STATIC,11,14,37,8
+    GROUPBOX        "Direction",IDC_STATIC,120,34,56,33,WS_GROUP
+END
+
+IDD_SYSTEMSETTING DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统设置"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,54,71,50,14
+    PUSHBUTTON      "取消",IDCANCEL,118,70,50,14
+    LTEXT           "请设定版本：",IDC_STATIC,30,19,48,11
+    COMBOBOX        IDC_COMBO1,79,17,25,32,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_NEWBSP DIALOG DISCARDABLE  0, 0, 288, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BSP Wizard - Step 1"
+FONT 10, "System"
+BEGIN
+    LTEXT           "New BSP Name:",IDC_STATIC,13,51,73,9
+    EDITTEXT        IDC_NEWBSPNAME,13,61,255,12,ES_AUTOHSCROLL
+    LTEXT           "Vendor:",IDC_STATIC,13,80,54,10
+    EDITTEXT        IDC_Vendor,14,93,114,13,ES_AUTOHSCROLL
+    LTEXT           "Version:",IDC_STATIC,140,79,35,8
+    EDITTEXT        IDC_VERSION0,139,92,24,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VERSION1,166,92,24,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VERSION2,194,92,24,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_VERSION3,221,92,48,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Description",IDC_STATIC,14,115,41,8
+    EDITTEXT        IDC_DESCRIPTION,14,127,255,12,ES_AUTOHSCROLL
+    LTEXT           "New BSP",IDC_STATIC,15,17,52,7
+END
+
+IDD_CPUANDBSPDIR DIALOG DISCARDABLE  0, 0, 330, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BSP Wizard - Step 2"
+FONT 10, "System"
+BEGIN
+    LTEXT           "CPU and BSP Platform Directroy",IDC_STATIC,18,16,111,8
+    LTEXT           "BSP Platform Name",IDC_STATIC,20,49,104,9
+    COMBOBOX        IDC_BSPPLATFORMNAME,21,63,291,52,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "CPU:",IDC_STATIC,20,83,17,8
+    LISTBOX         IDC_CPUTYPE,22,98,289,61,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_NEWPLATFORM_STEP1 DIALOG DISCARDABLE  0, 0, 294, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Platform Wizard - Step 1"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Platfrom Configuration",IDC_STATIC,18,13,89,8
+    LTEXT           "Platform name:",IDC_STATIC,19,30,122,9
+    EDITTEXT        IDC_PLATFORMNAME,20,47,222,12,ES_AUTOHSCROLL
+    LTEXT           "Location:",IDC_STATIC,19,70,97,8
+    EDITTEXT        IDC_LOCATION,19,84,199,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWRES,225,84,16,13
+    LTEXT           "Platform Root:",IDC_STATIC,17,110,110,7
+    EDITTEXT        IDC_PLATFORMROOT,19,124,199,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWRES2,225,123,16,13
+END
+
+IDD_NEWPLATFORM_STEP2 DIALOG DISCARDABLE  0, 0, 303, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Platform Wizard - Step 2"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Board Support Packages (BSPs)",IDC_STATIC,17,14,110,8
+    LTEXT           "Available BSPs",IDC_STATIC,19,35,67,8
+    LISTBOX         IDC_BSPLIST,19,47,146,99,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select One BSPs For Your New Platform.",IDC_STATIC,176,
+                    57,111,23
+END
+
+IDD_NEWPLATFORM_STEP3 DIALOGEX 0, 0, 295, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Platform Wizard - Step 3"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "Sevives Components",IDC_STATIC,19,13,99,8
+    LTEXT           "Available Features:",IDC_STATIC,19,29,70,8
+    CONTROL         "Tree1",IDC_FEATURE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    WS_TABSTOP,19,40,147,114,WS_EX_CLIENTEDGE
+    LTEXT           "Select You need Module for project.Click The item to select or unselect the item.",
+                    IDC_STATIC,179,43,103,76
+END
+
+IDD_PLATFORMSET_PAGE1 DIALOG DISCARDABLE  0, 0, 255, 155
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Build Type:",IDC_STATIC,14,19,66,8
+    COMBOBOX        IDC_BUILDTYPE,14,31,221,39,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PLATFORMSET_PAGE2 DIALOGEX 0, 0, 255, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Environment"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "Environment Variables",IDC_STATIC,13,7,98,8
+    CONTROL         "List1",IDC_ENVIRONMENT,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,
+                    18,20,230,146,WS_EX_TRANSPARENT
+    PUSHBUTTON      "New...",IDC_NEWENV,130,172,32,14
+    PUSHBUTTON      "Delete",IDC_DELENV,211,172,37,14
+    PUSHBUTTON      "Edit...",IDC_EDITENV,168,172,33,14
+END
+
+IDD_SETENV DIALOG DISCARDABLE  0, 0, 167, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置环境变量"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,77,50,14
+    LTEXT           "变量名:",IDC_STATIC,17,26,30,8
+    EDITTEXT        IDC_EDIT1,49,26,83,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,49,43,83,12,ES_AUTOHSCROLL
+    LTEXT           "值:",IDC_STATIC,17,43,11,8
+END
+
+IDD_AVTIVESOFTWARE DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "激活产品"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,61,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,77,50,14
+    LTEXT           "请输入产品序列号，该序列号可以到以下网址免费获得。http://www.mlg.com.cn",
+                    IDC_STATIC,13,15,157,19
+    EDITTEXT        IDC_EDIT1,19,43,139,12,ES_AUTOHSCROLL
+END
+
+IDD_PLATFORMSET_PAGE3 DIALOG DISCARDABLE  0, 0, 255, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Directory"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Show Directory for:",IDC_STATIC,7,7,63,8
+    COMBOBOX        IDC_SELECTDIRFOR,7,19,116,41,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PPP,7,36,241,152,ES_AUTOHSCROLL | NOT WS_VISIBLE | 
+                    WS_DISABLED
+END
+
+IDD_PLATFORMSET_PAGE4 DIALOG DISCARDABLE  0, 0, 255, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Compiler"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Category:",IDC_STATIC,18,14,34,11
+    COMBOBOX        IDC_CATEGORYLIST,53,13,86,27,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Warning Level:",IDC_STATIC,19,35,58,10
+    COMBOBOX        IDC_WARNINGLEVELLIST,20,49,90,59,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Optimizations:",IDC_STATIC,128,34,76,11
+    COMBOBOX        IDC_OPTIMIZATIONSLIST,127,48,84,51,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preprocessor Definitions:",IDC_STATIC,20,68,118,11
+    EDITTEXT        IDC_PREPROCESSOR,19,82,198,12,ES_AUTOHSCROLL
+    LTEXT           "Project Options:",IDC_STATIC,19,103,92,11
+    EDITTEXT        IDC_PROJECTOPTIONS,19,114,201,69,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+END
+
+IDD_PLATFORMSET_PAGE5 DIALOG DISCARDABLE  0, 0, 255, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Assember"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Category:",IDC_STATIC,18,14,34,11
+    COMBOBOX        IDC_CATEGORYLIST,53,13,86,27,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Warning Level:",IDC_STATIC,19,35,58,10
+    COMBOBOX        IDC_WARNINGLEVELLIST,20,49,90,59,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preprocessor Definitions:",IDC_STATIC,20,68,118,11
+    EDITTEXT        IDC_PREPROCESSOR,19,82,198,12,ES_AUTOHSCROLL
+    LTEXT           "Project Options:",IDC_STATIC,19,103,92,11
+    EDITTEXT        IDC_PROJECTOPTIONS,19,114,201,69,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+END
+
+IDD_PLATFORMSET_PAGE6 DIALOG DISCARDABLE  0, 0, 255, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Link"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Category:",IDC_STATIC,18,14,34,11
+    COMBOBOX        IDC_CATEGORYLIST,53,13,86,29,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Project Options:",IDC_STATIC,20,94,92,8
+    EDITTEXT        IDC_PROJECTOPTIONS,19,108,201,75,ES_MULTILINE | 
+                    ES_AUTOVSCROLL
+    LTEXT           "Output File Name:",IDC_STATIC,20,30,88,8
+    EDITTEXT        IDC_OUTPUTFILENAME,19,42,200,12,ES_AUTOHSCROLL
+    CONTROL         "out image file(.map)",IDC_OUTPUTMAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,70,80,10
+END
+
+IDD_FINDINFILES DIALOG DISCARDABLE  0, 0, 258, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find In Files"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_FINDTEXTCOMBO,50,13,136,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match Whole Word Only",IDC_MATCHWHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,66,95,10
+    CONTROL         "Match Case",IDC_MATCH_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,79,54,10
+    DEFPUSHBUTTON   "Find",IDC_FIND,206,13,45,12,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,206,44,45,12
+    LTEXT           "Find What:",IDC_STATIC,6,16,37,8
+    COMBOBOX        IDC_FINDFILTER,50,29,136,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Filter Files:",IDC_STATIC,6,31,37,8
+    COMBOBOX        IDC_FINDFOLDER,50,45,136,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Find Folder:",IDC_STATIC,6,47,41,8
+    CONTROL         "Look in SubFolder",IDC_LOOKINSUBFOLDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,118,65,93,10
+    PUSHBUTTON      "...",IDC_BROWSE,190,45,11,11
+END
+
+IDD_REPLACEDLG DIALOG DISCARDABLE  0, 0, 258, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_FINDTEXTCOMBO,64,14,129,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match Whole Word Only",IDC_MATCHWHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,52,95,10
+    CONTROL         "Match Case",IDC_MATCH_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,24,65,54,10
+    DEFPUSHBUTTON   "Find Next",IDC_FIND_NEXT,199,14,45,12,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,199,67,45,12
+    LTEXT           "Find What:",IDC_STATIC,18,15,37,8
+    LTEXT           "Replace With:",IDC_STATIC,14,33,49,8
+    COMBOBOX        IDC_REPLACETEXTCOMBO,63,30,129,62,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Replace",IDC_REPLACE,199,32,45,12,WS_DISABLED
+    DEFPUSHBUTTON   "Replace All",IDC_REPLACEALL,199,50,45,12,WS_DISABLED
+END
+
+IDD_NEWFOLDER DIALOG DISCARDABLE  0, 0, 187, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加新目录"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    LTEXT           "要添加的新目录的名称：",IDC_STATIC,21,15,90,11
+    EDITTEXT        IDC_NEWFOLDERTEXT,22,29,98,13,ES_AUTOHSCROLL
+END
+
+IDD_MODULESELECT DIALOGEX 0, 0, 236, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "模块选择"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,179,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,179,129,50,14
+    CONTROL         "Tree1",IDC_FEATURE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    WS_TABSTOP,15,29,147,114,WS_EX_CLIENTEDGE
+    LTEXT           "选择你所需要的模块：",IDC_STATIC,16,15,158,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,3,1,0
+ PRODUCTVERSION 2,3,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Kingmos实时嵌入式操作系统集成开发平台\0"
+            VALUE "CompanyName", "深圳市微逻辑电子有限公司\0"
+            VALUE "FileDescription", "Kingmos Builder Microsoft \0"
+            VALUE "FileVersion", "2, 3, 1, 0\0"
+            VALUE "InternalName", "KingBuilder\0"
+            VALUE "LegalCopyright", "版权所有 (C) 1998-2005 深圳市微逻辑电子有限公司\0"
+            VALUE "LegalTrademarks", "KingBuilder\0"
+            VALUE "OriginalFilename", "KingBuilder.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Kingmos 集成开发平台\0"
+            VALUE "ProductVersion", "2, 3, 1, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_CREATESELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_CREATEINPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_FINDTEXTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_SYSTEMSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_NEWBSP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_CPUANDBSPDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_NEWPLATFORM_STEP1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_NEWPLATFORM_STEP2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_NEWPLATFORM_STEP3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PLATFORMSET_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_PLATFORMSET_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+    END
+
+    IDD_SETENV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_AVTIVESOFTWARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_PLATFORMSET_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_PLATFORMSET_PAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_PLATFORMSET_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_PLATFORMSET_PAGE6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_FINDINFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_REPLACEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_NEWFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_MODULESELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTION DLGINIT
+BEGIN
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0030, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0031, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0032, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0033, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0034, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0035, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0036, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0037, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0038, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0039, 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_FOREGROUND, 0x403, 7, 0
+0x6957, 0x646e, 0x776f, "\000" 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0030, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0031, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0032, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0033, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0034, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0035, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0036, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0037, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0038, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0039, 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_BACKGROUND, 0x403, 7, 0
+0x6957, 0x646e, 0x776f, "\000" 
+    0
+END
+
+IDD_SYSTEMSETTING DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 2, 0
+0x0042, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0043, 
+    0
+END
+
+IDD_PLATFORMSET_PAGE1 DLGINIT
+BEGIN
+    IDC_BUILDTYPE, 0x403, 6, 0
+0x6544, 0x7562, 0x0067, 
+    IDC_BUILDTYPE, 0x403, 8, 0
+0x6552, 0x656c, 0x7361, 0x0065, 
+    0
+END
+
+IDD_PLATFORMSET_PAGE3 DLGINIT
+BEGIN
+    IDC_SELECTDIRFOR, 0x403, 14, 0
+0x6e69, 0x6c63, 0x6475, 0x2065, 0x6966, 0x656c, 0x0073, 
+    IDC_SELECTDIRFOR, 0x403, 14, 0
+0x696c, 0x7262, 0x7261, 0x2079, 0x6966, 0x656c, 0x0073, 
+    0
+END
+
+IDD_PLATFORMSET_PAGE4 DLGINIT
+BEGIN
+    IDC_CATEGORYLIST, 0x403, 8, 0
+0x6547, 0x656e, 0x6172, 0x006c, 
+    IDC_WARNINGLEVELLIST, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0031, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0032, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0033, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0034, 
+    IDC_OPTIMIZATIONSLIST, 0x403, 8, 0
+0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_OPTIMIZATIONSLIST, 0x403, 8, 0
+0x6944, 0x6173, 0x6c62, 0x0065, 
+    IDC_OPTIMIZATIONSLIST, 0x403, 15, 0
+0x614d, 0x6978, 0x696d, 0x657a, 0x7320, 0x6570, 0x6465, "\000" 
+    IDC_OPTIMIZATIONSLIST, 0x403, 14, 0
+0x694d, 0x696e, 0x696d, 0x657a, 0x7320, 0x7a69, 0x0065, 
+    0
+END
+
+IDD_PLATFORMSET_PAGE5 DLGINIT
+BEGIN
+    IDC_CATEGORYLIST, 0x403, 8, 0
+0x6547, 0x656e, 0x6172, 0x006c, 
+    IDC_WARNINGLEVELLIST, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0031, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0032, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0033, 
+    IDC_WARNINGLEVELLIST, 0x403, 8, 0
+0x654c, 0x6576, 0x206c, 0x0034, 
+    0
+END
+
+IDD_PLATFORMSET_PAGE6 DLGINIT
+BEGIN
+    IDC_CATEGORYLIST, 0x403, 8, 0
+0x6547, 0x656e, 0x6172, 0x006c, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F7,          IDM_BUILD,              VIRTKEY, NOINVERT
+    VK_F7,          IDM_COMPILE,            VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         ID_WINDOW_NEXT,         VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Kingmos Platform Builder"
+    IDR_AMBOTYPE            "\nText"
+    IDS_AMBOTYPEBAK         "\nKingmos Builder\nKingmos Builder\nKingmos Builder 文件 (*.c;*.cpp)\n.c;.cpp"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Kingmos Builder"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "为活动文档打开另一个窗口\n新建窗口"
+    ID_WINDOW_ARRANGE       "将图标排列在窗口底部\n排列图标"
+    ID_WINDOW_CASCADE       "排列窗口成相互重叠\n层叠窗口"
+    ID_WINDOW_TILE_HORZ     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_TILE_VERT     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+    AFX_IDS_MDICHILD        "激活该窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+    IDS_CFILEFILTER         "C,C++文件 (*.C;*.CPP;*.H)\n"
+    IDS_WORKSPACESFILTER    "WorkSpaces工程文件(*.osw)\n"
+    IDS_PROJECTFILTER       "应用程序工程文件(*.osp)\n"
+    IDS_TEXTFILTER          "文本文件(*.txt)\n"
+    IDS_OPENWORKSPACE       "打开WorkSpace"
+    IDS_SOURCEFILTER        "Source文件(*.)\n"
+    IDS_OPENSOURCE          "打开Source文件"
+    IDS_INSERTFILE          "插入文件"
+    IDS_LIBRARY             "库文件(*.a)\n"
+    IDS_LIBRARYFILTER       "*.a"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BUILD                "编译一个环境或工程"
+    ID_EDIT_TOGGLE_BOOKMARK "插入或取消一个书签\n插入书签"
+    ID_EDIT_GOTO_NEXT_BOOKMARK "移动到下一个书签\n下一个书签"
+    ID_EDIT_GOTO_PREV_BOOKMARK "移动到前一个书签\n上一个书签"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR_ALL_BOOKMARKS "清除所有书签\n清除书签"
+    ID_SEARCHINPUT          "输入查找字符串\n查找"
+    ID_COMPILE              "编译一个文件"
+    ID_STOPBUILD            "停止编译"
+    IDM_COMPILE             "编译当前打开的文件\nCompile"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_BUILD               "编译当前打开的工程或环境\nBuild"
+    IDM_STOPBUILD           "停止编译 \nStop"
+    IDM_PRJSETTING          "设置当前工程的各种环境"
+    IDM_OPTION              "配置当前整个编译编辑的系统环境"
+    IDM_REBUILD             "重新编译\nRebuild"
+    IDM_CLEAN               "清除\nClean"
+    IDM_MAKEIMAGE           "MakeImage\nMakeImage"
+    IDM_COMPILEFEATURE      "编译模块"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_INSERTFILE          "添加文件到当前打开的工程\n添加文件"
+    IDM_DELETEITEM          "删除指定的条目\n 删除条目"
+    IDM_INSERTFOLDER        "在当前选择条目下添加一个新目录\n添加新目录"
+    IDM_REFRESHMODULE       "刷新模块"
+    IDM_MODULESELECT        "选择需要添加哪些模块/n模块选择(&M)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHARSET             "GB2312_CHARSET"
+    IDS_SAVE_CHANGE         "文件没有保存，需要保存吗？(Y/N)"
+    IDS_INVALID_PATH        "无效路径"
+    IDS_NO_FIND_BUILDER_PATH "没有找到KingBuilder路径"
+    IDS_STOP_BUILDING       "系统正在编译，工程不能打开，请首先停止编译"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_AMBOTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "New(&N)\tCtrl+N",             ID_NEW
+        MENUITEM "Open(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "Close(&C)",                   ID_FILE_CLOSE
+        MENUITEM "Save(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "Save as(&A)...",              ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "New &WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "Open Work&Space",             ID_OPENWORKSPACE
+        MENUITEM "Close Wo&rkSpace",            ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "Print (&P)...\tCtrl+P",       ID_FILE_PRINT
+        MENUITEM "Print Preview (&V)",          ID_FILE_PRINT_PREVIEW
+        MENUITEM "Print setting(&R)...",        ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent file"
+        BEGIN
+            MENUITEM "????",                        ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent WorkSpace"
+        BEGIN
+            MENUITEM "????",                        ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit (&X)",                   ID_APP_EXIT
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find in File...",             ID_FINDINFILES
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Tools bar(&T)",               ID_VIEW_TOOLBAR
+        MENUITEM "State bar(&S)",               ID_VIEW_STATUS_BAR
+        MENUITEM "Edit bar",                    ID_VIEW_EDITBAR
+        MENUITEM "Complier bar",                ID_VIEW_BUILDBAR
+        MENUITEM "Work space",                  ID_VIEW_WORKSPACE
+        MENUITEM "Output Window",               ID_VIEW_OUTPUT
+    END
+    POPUP "Build(&B)"
+    BEGIN
+        MENUITEM "Complie File",                IDM_COMPILE
+        MENUITEM "Complie Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Stop(&S)",                    IDM_STOPBUILD
+        MENUITEM "Make Image",                  IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM "Clear",                       IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "Command Line",                IDM_CONSOLE
+    END
+    POPUP "Project(&P)"
+    BEGIN
+        MENUITEM "Environment Setting(&S)",     IDM_PRJSETTING
+        MENUITEM "Module Config(&M)",           IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Add files",                   IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "Customize(&O)",               IDM_OPTION
+    END
+    POPUP "Window(&W)"
+    BEGIN
+        MENUITEM "Close All(&L)",               ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "New Window(&N)",              ID_WINDOW_NEW
+        MENUITEM "Cascade(&C)",                 ID_WINDOW_CASCADE
+        MENUITEM "Tile(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "Set icon(&A)",                ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Next Window(&E)",             ID_WINDOW_NEXT
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "About Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_EDITPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "New(&N)\tCtrl+N",             ID_NEW
+        MENUITEM "Open(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "New &WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "Open Work&Space",             ID_OPENWORKSPACE
+        MENUITEM "Close Wo&rkSpace",            ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "Print Setup(&R)...",          ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent file"
+        BEGIN
+            MENUITEM "????",                        ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent WorkSpace"
+        BEGIN
+            MENUITEM "????",                        ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                    ID_APP_EXIT
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find in Files...",            ID_FINDINFILES
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Tool Bar(&T)",                ID_VIEW_TOOLBAR
+        MENUITEM "State Bar(&S)",               ID_VIEW_STATUS_BAR
+        MENUITEM "Edit Bar",                    ID_VIEW_EDITBAR
+        MENUITEM "Complier Bar",                ID_VIEW_BUILDBAR
+        MENUITEM "Workspace",                   ID_VIEW_WORKSPACE
+        MENUITEM "Output Window",               ID_VIEW_OUTPUT
+    END
+    POPUP "Build(&B)"
+    BEGIN
+        MENUITEM "Complie File",                IDM_COMPILE
+        MENUITEM "Complie Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Stop(&S)",                    IDM_STOPBUILD
+        MENUITEM "Make Image",                  IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM "Clear",                       IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "Command Line",                IDM_CONSOLE
+    END
+    POPUP "Project(&P)"
+    BEGIN
+        MENUITEM "Environment Setting(&S)",     IDM_PRJSETTING
+        MENUITEM "Module Config(&M)",           IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Add files",                   IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "Customize(&O)",               IDM_OPTION
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "About Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_MATTERVIEWPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Compile Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM SEPARATOR
+        MENUITEM "Flush View",                  IDM_REFRESHMODULE
+    END
+END
+
+IDR_PROJECTPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Project"
+    BEGIN
+        MENUITEM "Add new folder(&N)",          IDM_INSERTFOLDER
+        MENUITEM "Add file(&I)",                IDM_INSERTFILE
+        MENUITEM "Delete(&D)",                  IDM_DELETEITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Compile file(&C)",            ID_COMPILE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Kingmos Platform Builder"
+    IDR_AMBOTYPE            "\nText"
+    IDS_AMBOTYPEBAK         "\nKingmos Builder\nKingmos Builder\nKingmos Builder ?? (*.c;*.cpp)\n.c;.cpp"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Kingmos Builder"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "extend file name"
+    ID_INDICATOR_CAPS       "caps"
+    ID_INDICATOR_NUM        "num"
+    ID_INDICATOR_SCRL       "scroll"
+    ID_INDICATOR_OVR        "overwrite"
+    ID_INDICATOR_REC        "record"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "New file\nNew file"
+    ID_FILE_OPEN            "Open exist file\nOpen"
+    ID_FILE_CLOSE           "Close file\nclose"
+    ID_FILE_SAVE            "Save file\nSave"
+    ID_FILE_SAVE_AS         "Save as new file name\nSave as"
+    ID_FILE_PAGE_SETUP      "Set Page Option\n?Page Setup"
+    ID_FILE_PRINT_SETUP     "change printer option\nPrinter Setup"
+    ID_FILE_PRINT           "Print file\nPrint file"
+    ID_FILE_PRINT_PREVIEW   "Print preview\npreview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "display the program information and copyright\nabout"
+    ID_APP_EXIT             "quits the application;prompts to save docs\nquit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open file"
+    ID_FILE_MRU_FILE2       "Open file"
+    ID_FILE_MRU_FILE3       "Open file"
+    ID_FILE_MRU_FILE4       "Open file"
+    ID_FILE_MRU_FILE5       "Open file"
+    ID_FILE_MRU_FILE6       "Open file"
+    ID_FILE_MRU_FILE7       "Open file"
+    ID_FILE_MRU_FILE8       "Open file"
+    ID_FILE_MRU_FILE9       "Open file"
+    ID_FILE_MRU_FILE10      "Open file"
+    ID_FILE_MRU_FILE11      "Open file"
+    ID_FILE_MRU_FILE12      "Open file"
+    ID_FILE_MRU_FILE13      "Open file"
+    ID_FILE_MRU_FILE14      "Open file"
+    ID_FILE_MRU_FILE15      "Open file"
+    ID_FILE_MRU_FILE16      "Open file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Activates next pane\nnext pane"
+    ID_PREV_PANE            "Activates prev pane\nprev pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Create  a new window for new doc\nnew window"
+    ID_WINDOW_ARRANGE       "arrange icon\narrange icon"
+    ID_WINDOW_CASCADE       "Arranges the windows as overlapping tiles \ncascade window"
+    ID_WINDOW_TILE_HORZ     "Arranges the windows as horizontal tiles,nonoverlapping \ncascade window"
+    ID_WINDOW_TILE_VERT     "Arranges the windows as vertial tiles,nonoverlapping \ncascade window"
+    ID_WINDOW_SPLIT         "splits the windows into panes\nsplit window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Clear select\nclear"
+    ID_EDIT_CLEAR_ALL       "Clear all\nClear all"
+    ID_EDIT_COPY            "Copy selection to clipboard\nCopy"
+    ID_EDIT_CUT             "Cut selection and copy to clipboard\nCut"
+    ID_EDIT_FIND            "find text\nfind"
+    ID_EDIT_PASTE           "insert text\npaste"
+    ID_EDIT_REPEAT          "repeat\nrepeat"
+    ID_EDIT_REPLACE         "Replace with text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select all text\nSelect All"
+    ID_EDIT_UNDO            "undo\nundo"
+    ID_EDIT_REDO            "redo\nredo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "show or hide toolbar\nshow or hide toolbar"
+    ID_VIEW_STATUS_BAR      "show or hide state bar\nshow or hide state bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "changes window size"
+    AFX_IDS_SCMOVE          "change window postion"
+    AFX_IDS_SCMINIMIZE      "minimize"
+    AFX_IDS_SCMAXIMIZE      "maximize"
+    AFX_IDS_SCNEXTWINDOW    "next doc window"
+    AFX_IDS_SCPREVWINDOW    "prev doc window"
+    AFX_IDS_SCCLOSE         "closes window and prompts to save doc"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "restore the window's size"
+    AFX_IDS_SCTASKLIST      "activate task list"
+    AFX_IDS_MDICHILD        "activate the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "close print preview mode\ncancel preview"
+    IDS_CFILEFILTER         "C,C++ files (*.C;*.CPP;*.H)\n"
+    IDS_WORKSPACESFILTER    "WorkSpaces files(*.osw)\n"
+    IDS_PROJECTFILTER       "Application project files(*.osp)\n"
+    IDS_TEXTFILTER          "text files(*.txt)\n"
+    IDS_OPENWORKSPACE       "Open WorkSpace"
+    IDS_SOURCEFILTER        "Source files(*.)\n"
+    IDS_OPENSOURCE          "Open source files"
+    IDS_INSERTFILE          "insert file"
+    IDS_LIBRARY             "library files(*.a)\n"
+    IDS_LIBRARYFILTER       "*.a"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BUILD                "Compile file or project"
+    ID_EDIT_TOGGLE_BOOKMARK "Insert or remove bookmark \n insert bookmark"
+    ID_EDIT_GOTO_NEXT_BOOKMARK "move to next bookmark \n next bookmark"
+    ID_EDIT_GOTO_PREV_BOOKMARK "move to prev bookmark \n prev bookmark"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR_ALL_BOOKMARKS "clear all bookmark \n clear bookmark"
+    ID_SEARCHINPUT          "input string to find \n find"
+    ID_COMPILE              "compile file"
+    ID_STOPBUILD            "stop compile"
+    IDM_COMPILE             "compile open file \nCompile"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_BUILD               "Compile current project \nBuild"
+    IDM_STOPBUILD           "Stop compile \nStop"
+    IDM_PRJSETTING          "set project"
+    IDM_OPTION              "change option"
+    IDM_REBUILD             "Rebuild\nRebuild"
+    IDM_CLEAN               "Clean\nClean"
+    IDM_MAKEIMAGE           "MakeImage\n MakeImage"
+    IDM_COMPILEFEATURE      "Make Module"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_INSERTFILE          "Add file to project\nadd file"
+    IDM_DELETEITEM          "delete item\n delete item"
+    IDM_INSERTFOLDER        "add item to new folder\nadd item"
+    IDM_REFRESHMODULE       "flush module"
+    IDM_MODULESELECT        "Select module/nSelect module(&M)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHARSET             "CHINESEBIG5_CHARSET"
+    IDS_SAVE_CHANGE         "Save change to file?(Y/N)"
+    IDS_INVALID_PATH        "Invalid path"
+    IDS_NO_FIND_BUILDER_PATH "no find KingBuilder path"
+    IDS_STOP_BUILDING       "the compile is running,project can't open. stop compile first."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_AMBOTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "New(&N)\tCtrl+N",             ID_NEW
+        MENUITEM "Open(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "Close(&C)",                   ID_FILE_CLOSE
+        MENUITEM "Save(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "Save as(&A)...",              ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "New &WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "Open Work&Space",             ID_OPENWORKSPACE
+        MENUITEM "Close Wo&rkSpace",            ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "Print (&P)...\tCtrl+P",       ID_FILE_PRINT
+        MENUITEM "Print Preview (&V)",          ID_FILE_PRINT_PREVIEW
+        MENUITEM "Print setting(&R)...",        ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent file"
+        BEGIN
+            MENUITEM "????",                        ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent WorkSpace"
+        BEGIN
+            MENUITEM "????",                        ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit (&X)",                   ID_APP_EXIT
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find in File...",             ID_FINDINFILES
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Tools bar(&T)",               ID_VIEW_TOOLBAR
+        MENUITEM "State bar(&S)",               ID_VIEW_STATUS_BAR
+        MENUITEM "Edit bar",                    ID_VIEW_EDITBAR
+        MENUITEM "Complier bar",                ID_VIEW_BUILDBAR
+        MENUITEM "Work space",                  ID_VIEW_WORKSPACE
+        MENUITEM "Output Window",               ID_VIEW_OUTPUT
+    END
+    POPUP "Build(&B)"
+    BEGIN
+        MENUITEM "Complie File",                IDM_COMPILE
+        MENUITEM "Complie Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Stop(&S)",                    IDM_STOPBUILD
+        MENUITEM "Make Image",                  IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM "Clear",                       IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "Command Line",                IDM_CONSOLE
+    END
+    POPUP "Project(&P)"
+    BEGIN
+        MENUITEM "Environment Setting(&S)",     IDM_PRJSETTING
+        MENUITEM "Module Config(&M)",           IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Add files",                   IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "Customize(&O)",               IDM_OPTION
+    END
+    POPUP "Window(&W)"
+    BEGIN
+        MENUITEM "Close All(&L)",               ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "New Window(&N)",              ID_WINDOW_NEW
+        MENUITEM "Cascade(&C)",                 ID_WINDOW_CASCADE
+        MENUITEM "Tile(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "Set icon(&A)",                ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Next Window(&E)",             ID_WINDOW_NEXT
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "About Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_EDITPOPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "New(&N)\tCtrl+N",             ID_NEW
+        MENUITEM "Open(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "New &WorkSpace",              ID_NEWWORKSPACE
+        MENUITEM "Open Work&Space",             ID_OPENWORKSPACE
+        MENUITEM "Close Wo&rkSpace",            ID_CLOSEWORKSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "Print Setup(&R)...",          ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent file"
+        BEGIN
+            MENUITEM "????",                        ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent WorkSpace"
+        BEGIN
+            MENUITEM "????",                        ID_PROJECT_MRU_FILE1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                    ID_APP_EXIT
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Undo(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "Redo(R)\tCtrl+Y",             ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut(&T)\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Copy(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "Paste(&P)\tCtrl+V",           ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Find(&F)\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find in Files...",            ID_FINDINFILES
+        MENUITEM "Replace(&E)\tCtrl+H",         ID_EDIT_REPLACE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Tool Bar(&T)",                ID_VIEW_TOOLBAR
+        MENUITEM "State Bar(&S)",               ID_VIEW_STATUS_BAR
+        MENUITEM "Edit Bar",                    ID_VIEW_EDITBAR
+        MENUITEM "Complier Bar",                ID_VIEW_BUILDBAR
+        MENUITEM "Workspace",                   ID_VIEW_WORKSPACE
+        MENUITEM "Output Window",               ID_VIEW_OUTPUT
+    END
+    POPUP "Build(&B)"
+    BEGIN
+        MENUITEM "Complie File",                IDM_COMPILE
+        MENUITEM "Complie Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Stop(&S)",                    IDM_STOPBUILD
+        MENUITEM "Make Image",                  IDM_MAKEIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM "Clear",                       IDM_CLEAN
+        MENUITEM SEPARATOR
+        MENUITEM "Command Line",                IDM_CONSOLE
+    END
+    POPUP "Project(&P)"
+    BEGIN
+        MENUITEM "Environment Setting(&S)",     IDM_PRJSETTING
+        MENUITEM "Module Config(&M)",           IDM_MODULESELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Add files",                   IDM_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "BSP Wizard",                  ID_BSPWIZARD
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "Customize(&O)",               IDM_OPTION
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "About Kingmos Builder(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_MATTERVIEWPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Compile Module(&F)",          IDM_COMPILEFEATURE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+        MENUITEM SEPARATOR
+        MENUITEM "Flush View",                  IDM_REFRESHMODULE
+    END
+END
+
+IDR_PROJECTPOPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Project"
+    BEGIN
+        MENUITEM "Add new folder(&N)",          IDM_INSERTFOLDER
+        MENUITEM "Add file(&I)",                IDM_INSERTFILE
+        MENUITEM "Delete(&D)",                  IDM_DELETEITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Compile file(&C)",            ID_COMPILE
+        MENUITEM "Build Project(&B)",           IDM_BUILD
+        MENUITEM "Rebuild All(&R)",             IDM_REBUILD
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 91
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Kingmos Builder"
+FONT 9, "??"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Kingmos Platform Builder (Version:2.3.1 )",IDC_STATIC,
+                    39,18,189,8,SS_NOPREFIX
+    LTEXT           "ShenZhen WeiLuoJi. China 1998-2005 Copyright (C)  \r\nhttp://www.mlg.com.cn",
+                    IDC_STATIC,33,45,189,20
+    DEFPUSHBUTTON   "OK",IDOK,178,70,50,14,WS_GROUP
+END
+
+IDD_AVTIVESOFTWARE DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "????"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,61,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,77,50,14
+    LTEXT           "input serial number: \r\n ( you may get it from http://www.mlg.com.cn )",
+                    IDC_STATIC,13,15,157,19
+    EDITTEXT        IDC_EDIT1,19,43,139,12,ES_AUTOHSCROLL
+END
+
+IDD_CPUANDBSPDIR DIALOG DISCARDABLE  0, 0, 330, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BSP Wizard - Step 2"
+FONT 10, "System"
+BEGIN
+    LTEXT           "CPU and BSP Platform Directroy",IDC_STATIC,18,16,111,8
+    LTEXT           "BSP Platform Name",IDC_STATIC,20,49,104,9
+    COMBOBOX        IDC_BSPPLATFORMNAME,21,63,291,52,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "CPU:",IDC_STATIC,20,83,17,8
+    LISTBOX         IDC_CPUTYPE,22,98,289,61,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CREATEINPUT DIALOG DISCARDABLE  0, 0, 306, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Project"
+FONT 10, "System"
+BEGIN
+    LTEXT           "Project Name:",IDC_STATIC,134,13,69,9
+    EDITTEXT        IDC_WORKSPACESNAME,134,25,160,14,ES_AUTOHSCROLL
+    LTEXT           "Location:",IDC_STATIC,134,46,68,8
+    EDITTEXT        IDC_LOCATION,134,55,143,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWES,281,55,13,14
+    LTEXT           "CPU Support:",IDC_STATIC,134,74,50,8
+    COMBOBOX        IDC_CPUSELECT,134,83,160,52,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Project Type",IDC_STATIC,15,13,55,8
+    LISTBOX         IDC_PROJECTTYPE,15,24,104,71,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Load From a Exist Modules",IDC_LOADFROMSOURCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,102,240,10
+    LTEXT           "Module Position:",IDC_STATIC,16,116,68,8
+    EDITTEXT        IDC_SOURCELOCATION,17,128,259,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_SOURCEBROWES,281,127,13,14
+END
+
+IDD_CREATESELECT DIALOG DISCARDABLE  0, 0, 256, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New"
+FONT 10, "System"
+BEGIN
+    CONTROL         "WorkSpace",IDC_WORKSPACE,"Button",BS_AUTORADIOBUTTON,18,
+                    7,99,10
+    CONTROL         "Project",IDC_PROJECT,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,18,46,93,10
+    LTEXT           "make a hardware dependent platform, you must  have a bsp",
+                    IDC_STATIC,31,19,218,25
+    LTEXT           "make a application",IDC_STATIC,32,58,217,18,NOT 
+                    WS_VISIBLE
+END
+
+IDD_MODULESELECT DIALOGEX 0, 0, 236, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Module Select"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,179,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,179,129,50,14
+    CONTROL         "Tree1",IDC_FEATURE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    WS_TABSTOP,15,29,147,114,WS_EX_CLIENTEDGE
+    LTEXT           "Select need modules",IDC_STATIC,16,15,158,8
+END
+
+IDD_NEWFOLDER DIALOG DISCARDABLE  0, 0, 187, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "add new item"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    LTEXT           "item name:",IDC_STATIC,21,15,90,11
+    EDITTEXT        IDC_NEWFOLDERTEXT,22,29,98,13,ES_AUTOHSCROLL
+END
+
+IDD_OPTION DIALOG DISCARDABLE  0, 0, 189, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Option"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,101,97,36,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,97,34,14
+    LISTBOX         IDC_TEXTLIST,22,13,60,79,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FOREGROUND,104,13,61,52,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BACKGROUND,104,42,63,52,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Foreground:",IDC_STATIC,96,3,51,10
+    LTEXT           "Background:",IDC_STATIC,97,29,40,10
+    LTEXT           "item:",IDC_STATIC,7,2,59,9
+    LTEXT           "Sample:",IDC_STATIC,97,62,40,8
+    PUSHBUTTON      "Reset",IDC_RESET,32,97,38,14
+    CONTROL         "Button1",IDC_EFFECT,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    99,71,70,19
+END
+
+IDD_SETENV DIALOG DISCARDABLE  0, 0, 167, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Environment Variable"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,77,50,14
+    LTEXT           "variable:",IDC_STATIC,17,26,30,8
+    EDITTEXT        IDC_EDIT1,49,26,83,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,49,43,83,12,ES_AUTOHSCROLL
+    LTEXT           "Value:",IDC_STATIC,17,43,30,8
+END
+
+IDD_SYSTEMSETTING DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "System setting"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,54,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,70,50,14
+    LTEXT           "Set Version:",IDC_STATIC,30,19,48,11
+    COMBOBOX        IDC_COMBO1,79,17,25,32,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,3,1,0
+ PRODUCTVERSION 2,3,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Embed RTOS Builder Platform For Kingmos\0"
+            VALUE "CompanyName", "ShenZhen WeiLuoJi DianZhi, China. http://www.mlg.com.cn\0"
+            VALUE "FileDescription", "Kingmos Platform Builder\0"
+            VALUE "FileVersion", "2, 3, 1, 0\0"
+            VALUE "InternalName", "KingBuilder\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998-2005\0"
+            VALUE "LegalTrademarks", "KingBuilder\0"
+            VALUE "OriginalFilename", "KingBuilder.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Kingmos Platform Builder \0"
+            VALUE "ProductVersion", "2, 3, 1, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_AVTIVESOFTWARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_CPUANDBSPDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_CREATEINPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_CREATESELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_MODULESELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_NEWFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_SETENV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_SYSTEMSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTION DLGINIT
+BEGIN
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0030, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0031, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0032, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0033, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0034, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0035, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0036, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0037, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0038, 
+    IDC_FOREGROUND, 0x403, 2, 0
+0x0039, 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_FOREGROUND, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_FOREGROUND, 0x403, 7, 0
+0x6957, 0x646e, 0x776f, "\000" 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0030, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0031, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0032, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0033, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0034, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0035, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0036, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0037, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0038, 
+    IDC_BACKGROUND, 0x403, 2, 0
+0x0039, 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_BACKGROUND, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_BACKGROUND, 0x403, 7, 0
+0x6957, 0x646e, 0x776f, "\000" 
+    0
+END
+
+IDD_SYSTEMSETTING DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 2, 0
+0x0042, 
+    IDC_COMBO1, 0x403, 2, 0
+0x0043, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Kingmos Platform Builder"
+    IDR_AMBOTYPE            "\nText"
+    IDS_AMBOTYPEBAK         "\nKingmos Builder\nKingmos Builder\nKingmos Builder ?? (*.c;*.cpp)\n.c;.cpp"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Kingmos Builder"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "extend file name"
+    ID_INDICATOR_CAPS       "caps"
+    ID_INDICATOR_NUM        "num"
+    ID_INDICATOR_SCRL       "scroll"
+    ID_INDICATOR_OVR        "overwrite"
+    ID_INDICATOR_REC        "record"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "New file\nNew file"
+    ID_FILE_OPEN            "Open exist file\nOpen"
+    ID_FILE_CLOSE           "Close file\nclose"
+    ID_FILE_SAVE            "Save file\nSave"
+    ID_FILE_SAVE_AS         "Save as new file name\nSave as"
+    ID_FILE_PAGE_SETUP      "Set Page Option\n?Page Setup"
+    ID_FILE_PRINT_SETUP     "change printer option\nPrinter Setup"
+    ID_FILE_PRINT           "Print file\nPrint file"
+    ID_FILE_PRINT_PREVIEW   "Print preview\npreview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "display the program information and copyright\nabout"
+    ID_APP_EXIT             "quits the application;prompts to save docs\nquit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open file"
+    ID_FILE_MRU_FILE2       "Open file"
+    ID_FILE_MRU_FILE3       "Open file"
+    ID_FILE_MRU_FILE4       "Open file"
+    ID_FILE_MRU_FILE5       "Open file"
+    ID_FILE_MRU_FILE6       "Open file"
+    ID_FILE_MRU_FILE7       "Open file"
+    ID_FILE_MRU_FILE8       "Open file"
+    ID_FILE_MRU_FILE9       "Open file"
+    ID_FILE_MRU_FILE10      "Open file"
+    ID_FILE_MRU_FILE11      "Open file"
+    ID_FILE_MRU_FILE12      "Open file"
+    ID_FILE_MRU_FILE13      "Open file"
+    ID_FILE_MRU_FILE14      "Open file"
+    ID_FILE_MRU_FILE15      "Open file"
+    ID_FILE_MRU_FILE16      "Open file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Activates next pane\nnext pane"
+    ID_PREV_PANE            "Activates prev pane\nprev pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Create  a new window for new doc\nnew window"
+    ID_WINDOW_ARRANGE       "arrange icon\narrange icon"
+    ID_WINDOW_CASCADE       "Arranges the windows as overlapping tiles \ncascade window"
+    ID_WINDOW_TILE_HORZ     "Arranges the windows as horizontal tiles,nonoverlapping \ncascade window"
+    ID_WINDOW_TILE_VERT     "Arranges the windows as vertial tiles,nonoverlapping \ncascade window"
+    ID_WINDOW_SPLIT         "splits the windows into panes\nsplit window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Clear select\nclear"
+    ID_EDIT_CLEAR_ALL       "Clear all\nClear all"
+    ID_EDIT_COPY            "Copy selection to clipboard\nCopy"
+    ID_EDIT_CUT             "Cut selection and copy to clipboard\nCut"
+    ID_EDIT_FIND            "find text\nfind"
+    ID_EDIT_PASTE           "insert text\npaste"
+    ID_EDIT_REPEAT          "repeat\nrepeat"
+    ID_EDIT_REPLACE         "Replace with text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select all text\nSelect All"
+    ID_EDIT_UNDO            "undo\nundo"
+    ID_EDIT_REDO            "redo\nredo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "show or hide toolbar\nshow or hide toolbar"
+    ID_VIEW_STATUS_BAR      "show or hide state bar\nshow or hide state bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "changes window size"
+    AFX_IDS_SCMOVE          "change window postion"
+    AFX_IDS_SCMINIMIZE      "minimize"
+    AFX_IDS_SCMAXIMIZE      "maximize"
+    AFX_IDS_SCNEXTWINDOW    "next doc window"
+    AFX_IDS_SCPREVWINDOW    "prev doc window"
+    AFX_IDS_SCCLOSE         "closes window and prompts to save doc"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "restore the window's size"
+    AFX_IDS_SCTASKLIST      "activate task list"
+    AFX_IDS_MDICHILD        "activate the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "close print preview mode\ncancel preview"
+    IDS_CFILEFILTER         "C,C++ files (*.C;*.CPP;*.H)\n"
+    IDS_WORKSPACESFILTER    "WorkSpaces files(*.osw)\n"
+    IDS_PROJECTFILTER       "Application project files(*.osp)\n"
+    IDS_TEXTFILTER          "text files(*.txt)\n"
+    IDS_OPENWORKSPACE       "Open WorkSpace"
+    IDS_SOURCEFILTER        "Source files(*.)\n"
+    IDS_OPENSOURCE          "Open source files"
+    IDS_INSERTFILE          "insert file"
+    IDS_LIBRARY             "library files(*.a)\n"
+    IDS_LIBRARYFILTER       "*.a"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BUILD                "Compile file or project"
+    ID_EDIT_TOGGLE_BOOKMARK "Insert or remove bookmark \n insert bookmark"
+    ID_EDIT_GOTO_NEXT_BOOKMARK "move to next bookmark \n next bookmark"
+    ID_EDIT_GOTO_PREV_BOOKMARK "move to prev bookmark \n prev bookmark"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR_ALL_BOOKMARKS "clear all bookmark \n clear bookmark"
+    ID_SEARCHINPUT          "input string to find \n find"
+    ID_COMPILE              "compile file"
+    ID_STOPBUILD            "stop compile"
+    IDM_COMPILE             "compile open file \nCompile"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_BUILD               "Compile current project \nBuild"
+    IDM_STOPBUILD           "Stop compile \nStop"
+    IDM_PRJSETTING          "set project"
+    IDM_OPTION              "change option"
+    IDM_REBUILD             "Rebuild\nRebuild"
+    IDM_CLEAN               "Clean\nClean"
+    IDM_MAKEIMAGE           "MakeImage\n MakeImage"
+    IDM_COMPILEFEATURE      "Make Module"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_INSERTFILE          "Add file to project\nadd file"
+    IDM_DELETEITEM          "delete item\n delete item"
+    IDM_INSERTFOLDER        "add item to new folder\nadd item"
+    IDM_REFRESHMODULE       "flush module"
+    IDM_MODULESELECT        "Select module/nSelect module(&M)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHARSET             "ANSI_CHARSET"
+    IDS_SAVE_CHANGE         "Save change to file(%s)?(Y/N)"
+    IDS_INVALID_PATH        "Invalid path"
+    IDS_NO_FIND_BUILDER_PATH "no find KingBuilder path"
+    IDS_STOP_BUILDING       "the compile is running,project can't open. stop compile first."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Ambo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
